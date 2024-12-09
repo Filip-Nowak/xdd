@@ -1,0 +1,193 @@
+/* Główne kontenery i stylizacja */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #f5f5f5;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  font-family: "Arial", sans-serif;
+  line-height: 1.7;
+}
+
+/* Nagłówek */
+.heading {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #1abc9c;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Opis */
+.description {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #ecf0f1;
+  animation: slideUp 1s ease-in-out;
+}
+
+/* Sekcje */
+.section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #1e272e;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Nagłówki sekcji */
+.subheading {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #00bcd4;
+}
+
+/* Tekst */
+.text {
+  font-size: 1rem;
+  margin: 1rem 0;
+  line-height: 1.8;
+  color: #ecf0f1;
+}
+
+/* Zespół zarządzający */
+.team {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.teamMember {
+  background: #3498db;
+  border-radius: 6px;
+  padding: 1.5rem;
+  flex: 1 1 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out, background 0.3s ease;
+}
+
+.teamMember:hover {
+  transform: translateY(-4px);
+  background: #2980b9;
+}
+
+.teamMemberName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.teamMemberText {
+  font-size: 0.9rem;
+  color: #ecf0f1;
+}
+
+/* Lista */
+.list {
+  list-style: disc;
+  padding-left: 2rem;
+  margin: 1rem 0;
+  color: #ecf0f1;
+}
+
+.listItem {
+  margin: 0.5rem 0;
+}
+
+/* Animacje */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 2.3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .teamMember {
+    flex: 1 1 45%;
+  }
+
+  .subheading {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .teamMember {
+    flex: 1 1 100%;
+  }
+
+  .subheading {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .teamMember {
+    padding: 1rem;
+  }
+
+  .teamMemberName {
+    font-size: 1rem;
+  }
+
+  .teamMemberText {
+    font-size: 0.8rem;
+  }
+}

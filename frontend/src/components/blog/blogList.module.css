@@ -1,0 +1,100 @@
+/* Kontener całego bloga */
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  animation: fadeInUp 1s ease-out; /* Dodanie animacji do całego kontenera */
+}
+
+/* Nagłówek */
+.heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #b0d1f1;
+}
+
+/* Kontener wpisów blogowych */
+.postsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Styl pojedynczego wpisu */
+.post {
+  background-color: #b2eaf8;
+  border: 1px solid #bdc3c7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+  /* Dodanie animacji */
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Efekt przy najechaniu */
+.post:hover {
+  transform: translateY(-5px);
+}
+
+/* Tytuł wpisu */
+.postTitle {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Data wpisu */
+.postDate {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+/* Skrót tekstu */
+.postExcerpt {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Przycisk */
+.readMore {
+  background-color: #2980b9;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.readMore:hover {
+  background-color: #3498db;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .postsContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animacje */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
